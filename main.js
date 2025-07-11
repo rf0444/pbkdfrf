@@ -22,7 +22,9 @@ async function generatePassword(userId, serviceDomain, iterations) {
   return btoa(String.fromCharCode(...byteArray));
 }
 document.addEventListener("DOMContentLoaded", () => {
+  console.log("content loaded");
   document.getElementById("proc").addEventListener("click", async () => {
+    console.log("clicked");
     const passEl = document.getElementById("pass");
     passEl.value = "";
     const sv = document.getElementById("sv").value;
