@@ -21,13 +21,14 @@ async function generatePassword(userId, serviceDomain, iterations) {
   const byteArray = new Uint8Array(derivedBits);
   return btoa(String.fromCharCode(...byteArray));
 }
-
-document.getElementById("proc").addEventListener("click", async () => {
-  const passEl = document.getElementById("pass");
-  passEl.value = "";
-  const sv = document.getElementById("sv").value;
-  const user = document.getElementById("user").value;
-  const iter = document.getElementById("iter").value - 0;
-  const pass = await generatePassword(user, sv, iter);
-  passEl.value = pass;
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("proc").addEventListener("click", async () => {
+    const passEl = document.getElementById("pass");
+    passEl.value = "";
+    const sv = document.getElementById("sv").value;
+    const user = document.getElementById("user").value;
+    const iter = document.getElementById("iter").value - 0;
+    const pass = await generatePassword(user, sv, iter);
+    passEl.value = pass;
+  }); 
 });
