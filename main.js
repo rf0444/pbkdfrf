@@ -1,3 +1,5 @@
+console.log("js loaded");
+
 async function generatePassword(userId, serviceDomain, iterations) {
   const encoder = new TextEncoder();
   const passwordKey = await window.crypto.subtle.importKey(
