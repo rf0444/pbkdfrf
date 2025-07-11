@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBKDF based password generator</title>
+</head>
+<body>
+  <div> 
+    <div>
+      サービスドメイン: <input type="text" id="sv" />
+    </div>
+    <div>
+      ユーザID: <input type="text" id="user" />
+    </div>
+    <div>
+      イテレーション: <input type="number" id="iter" />
+    </div>
+    <div>
+      <button type="button" id="proc">生成</button>
+    </div>
+    <div>
+      パスワード: <input type="text" id="pass" readonly />
+    </div>
+  </div>
+  <script src="main.js" />
+</body>
+</html>
